@@ -331,57 +331,61 @@ a {
     }
 }
 
-/* Hero Desktop Layout Additions */
-.hero-layout {
+/* About Section Additions */
+.about-layout {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 4rem;
+    gap: var(--space-xl);
 }
 
-.hero-text {
-    max-width: 520px;
+.about-text {
     flex: 1;
+    max-width: 500px;
 }
 
-.hero-photo img {
-    border-radius: 8px;
-    width: 420px;
+.about-photo {
+    flex: 0 0 auto;
+}
+
+.about-photo img {
     display: block;
+    width: 420px;
+    height: auto;
+    border-radius: 4px; /* subtle and minimal */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 @media (max-width: 900px) {
-    .hero-layout {
+    .about-layout {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero-text {
-        display: contents; /* Allows reordering children directly in hero-layout */
-    }
-
-    .hero-layout .hero-header { order: 1; width: 100%; }
-    
-    .hero-layout .headline { 
-        order: 2; 
-        width: 100%; 
-        margin-bottom: var(--space-lg); /* Override large default margin above the photo */
+        gap: 0;
     }
     
-    .hero-layout .hero-photo { 
-        order: 3; 
-        width: 100%; 
+    .about-text {
+        display: contents;
     }
     
-    .hero-layout .hero-footer { 
-        order: 4; 
-        width: 100%; 
-        /* The margin-top of hero-footer naturally distances it from the photo */
-    }
-
-    .hero-photo img {
+    .about-text .section-title {
+        order: 1;
         width: 100%;
-        max-width: 420px;
+        margin-bottom: var(--space-md);
+    }
+    
+    .about-photo {
+        order: 2;
+        width: 100%;
+        margin-bottom: var(--space-lg);
+    }
+    
+    .about-text .text-block-large {
+        order: 3;
+        width: 100%;
+    }
+    
+    .about-photo img {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
