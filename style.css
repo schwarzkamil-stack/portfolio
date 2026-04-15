@@ -351,9 +351,10 @@ a {
 
 .about-photo img {
     display: block;
-    width: 420px;
+    width: 350px;
     height: auto;
     border-radius: 4px; /* subtle and minimal */
+    border: 1px solid var(--border-color); /* subtle soft neutral gray outline */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
