@@ -218,13 +218,30 @@ a {
 }
 
 .credibility-names {
-    font-size: 1.15rem;
+    font-size: 1rem; /* Reduced by ~13% */
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 600;
     color: #444;
     line-height: 1.8;
     margin-bottom: 0;
+}
+
+.cred-row {
+    display: block;
+}
+
+.cred-row-sep {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .credibility-names {
+        line-height: 2;
+    }
+    .cred-row, .cred-row-sep {
+        display: inline;
+    }
 }
 
 .hero-header {
